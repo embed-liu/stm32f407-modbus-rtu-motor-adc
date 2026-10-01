@@ -1,0 +1,23 @@
+#ifndef __LED_H
+#define __LED_H
+
+#include "stm32f4xx.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_rcc.h"
+
+
+#include "misc.h"
+/*  LED时钟端口、引脚定义 */
+#define LED1_PORT 			GPIOF   
+#define LED1_PIN 			GPIO_Pin_9
+#define LED1_PORT_RCC		RCC_AHB1Periph_GPIOF
+
+#define LED2_PORT 			GPIOF   
+#define LED2_PIN 			GPIO_Pin_10
+#define LED2_PORT_RCC		RCC_AHB1Periph_GPIOF
+
+#define LED1 PFout(9)  	
+#define LED2 PFout(10)
+void led_Init(void);
+
+#endif

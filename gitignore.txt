@@ -1,0 +1,21 @@
+# Keil MDK
+*.uvgui*
+*.bak
+*.dep
+*.crf
+*.o
+*.d
+*.hex
+*.axf
+*.elf
+*.bin
+*.sct
+Objects/
+Listings/
+Debug/
+Release/
+
+# system
+__pycache__/
+*.DS_Store
+Thumbs.db
