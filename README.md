@@ -47,6 +47,3 @@
 
 ## 📝迭代计划
 - ✅v1.0 当前仓库：裸机Modbus‑RTU从站，电机+ADC采集
-
-## License
-MIT
