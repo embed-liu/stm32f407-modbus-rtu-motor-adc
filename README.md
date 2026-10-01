@@ -1,5 +1,5 @@
 # STM32F407‑Modbus‑RTU‑Motor‑ADC
-> 硬件平台：STM32F407ZGT6
+> 硬件平台：STM32F407ZGT6(普中战神开发板)
 > 开发环境：Keil MDK‑ARM
 > 通信：RS485总线 Modbus‑RTU 从站
 
@@ -7,7 +7,16 @@
 基于FreeModbus实现Modbus‑RTU从站。
 通过RS485上位机（Modbus Poll）读写保持寄存器；实现4路ADC采集、两台28BYJ‑48步进电机控制、TFT‑LCD屏幕显示。
 
-## ✨ 功能特性
+## 引脚定义
+- USART2（RS485 Modbus通信）：PA2(TX)，PA3(RX)
+- RS485 DE/RE 控制引脚：PG8 （高电平发送，低电平接收）
+- ADC采集通道：PA4、PA5、PA6、PA7
+- 步进电机1：PC0、PC1、PC2、PC3
+- 步进电机2：PC4、PC5、PC6、PC7
+- TFTLCD屏幕：沿用开发板硬件引脚（未改动LCD底层驱动）
+- 按键、LED：开发板预留IO，用于调试
+
+## ✨ 功能
 1. Modbus‑RTU从站参数：从站地址 `0x01`，波特率9600，8‑N‑1
 2. 支持功能码：**03读保持寄存器、06写单个保持寄存器**
 3. 外设：4通道ADC采集、双路步进电机驱动、TFT‑LCD显示、RS485通信
